@@ -19,19 +19,23 @@
     </header>
 
     <main class="Container">
-        <h1>Info aqui!</h1>
         <!-- Kevin -->
             <form>
                 <h2 class="cadastro">Cadastro </h2> 
                 <div class="Usuario">
                     <!-- <h3>Usuario</h3> -->
                     <label for="Usuario">Usuario</label>
-                    <input type="text" id="Usuario" required>
+                    <input type="text" id="Usuario" required placeholder="Digite seu nome de usuario">
+                </div>
+                <div class="Usuario">
+                    <!-- <h3>Email</h3> -->
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" name="email" required placeholder="exemplo@gmail.com">
                 </div>
                 <div class="Usuario">
                     <!-- <h3>Senha</h3> -->
                     <label for="senha">Senha</label>
-                    <input type="text" id="senha" required>
+                    <input type="password" id="senha" required placeholder="Digite sua senha">
                 </div>
 
                 <button type="submit" class="btn_cadastro">Cadastrar</button>
