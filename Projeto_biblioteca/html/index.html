@@ -1,0 +1,72 @@
+<!-- João -->
+<!DOCTYPE html>
+<html lang="pt BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotecolandia</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header class="Cabecalho">
+
+        <h1>Bibliotecolandia</h1>
+            <input
+        type="search"
+        class="BarraPesquisa"
+        placeholder ="Pesquisar livros..."
+            >
+
+        <nav>
+            <a href="cadastro.html" class="BotaoCadastro">Cadastro</a>
+        </nav>
+    </header>
+
+    <main class="Container">
+        <h1>Seja bem vindo!</h1>
+
+        <section class="FuncoesDoSite">
+            <div class="ContainerFuncoes">
+                <a href="cadastro_livro.html">
+                <img src="../imagens/Cadastro.png">
+                <h1>Cadastrar livro</h1>
+            </a>
+            </div>
+
+            <div class="ContainerFuncoes ContainerClicavel" id="cardRetirada" onclick="alternarRetirada()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();alternarRetirada();}" role="button" tabindex="0" aria-expanded="false" aria-controls="opcoesRetirada">
+                <img src="../imagens/livros.png">
+                <h1>Retirada, Devolução e Doação</h1>
+            </div>
+
+            <div class="ContainerFuncoes">
+                <a href="catalogo.html">
+                <img src="../imagens/biblioteca.png">
+                <h1>Catálogo de livros</h1>
+            </a>
+            </div>
+        </section>
+
+        <section class="OpcoesRetirada" id="opcoesRetirada" hidden>
+            <a href="retirada.html" class="BotaoOpcao" id="retirada">Retirada</a>
+            <a href="doacao.html" class="BotaoOpcao" id="doacao">Doação</a>
+            <a href="devolucao.html" class="BotaoOpcao" id="devolucao">Devolução</a>
+        </section>
+    </main>
+
+    
+    <footer class="Rodape">
+    <h1>Criadores do projeto: </h1>
+    <h2>João, Kevin e Murillo</h2>
+    </footer>
+    <script>
+        function alternarRetirada() {
+            const opcoes = document.getElementById("opcoesRetirada");
+            const card = document.getElementById("cardRetirada");
+            opcoes.hidden = !opcoes.hidden;
+            card.setAttribute("aria-expanded", String(!opcoes.hidden));
+        }
+    </script>
+</body>
+</html>
+<!--João-->

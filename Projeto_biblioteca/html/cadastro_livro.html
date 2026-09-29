@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotecolandia</title>
+    <link rel="stylesheet" href="../css/cadastro_livro.css">
+</head>
+
+<body>
+    <header class="Cabecalho">
+
+        <h1>Bibliotecolandia</h1>
+        <h2>Cadastro de livro</h2>
+        <nav>
+            <a href="index.html" class="BotaoVoltar">Voltar</a>
+        </nav>
+    </header>
+    <main class="Container">
+        <form>  
+            <h2 class="cadastro">Cadastro de livro</h2>
+
+        <div class="CadastroLivro">
+            <!-- <h3>Nome do livro</h3> -->
+            <label for="NomeLivro">Nome do livro </label>
+            <input type="text" id="NomeLivro" required placeholder="Digite o nome do livro">
+        </div>
+        <div class="CadastroLivro">
+            <!-- <h3>Autor do livro</h3> -->
+            <label for="AutorLivro">Autor do livro </label>
+            <input type="text" id="AutorLivro" required placeholder="Digite o nome do autor">
+        </div>
+        <div class="CadastroLivro">
+            <!-- <h3>Editora do livro</h3> -->
+            <label for="EditoraLivro">Editora do livro </label>
+            <input type="text" id="EditoraLivro" required placeholder="Digite o nome da editora">
+        </div>
+        <div class="CadastroLivro">
+            <!-- <h3>Quanatidade de paginas do livro</h3> -->
+            <label for="QuantidadePaginas">Quantidade de páginas </label>
+            <input type="number" id="QuantidadePaginas" required placeholder="Digite a quantidade de páginas">
+        </div>
+        <div class="CadastroLivro">
+            <!-- <h3>Categoria do livro</h3> -->
+            <label for="CategoriaLivro">Categoria do livro </label>
+            <input type="text" id="CategoriaLivro" required placeholder="Digite a categoria do livro">
+        </div>
+        <div class="CadastroLivro">
+            <!-- <h3>Data De lançamento do livro</h3> -->
+            <label for="DataLancamento">Data de lançamento </label>
+            <input type="date" id="DataLancamento" required>
+            </div>
+        <div class="CadastroLivro">
+            <!-- <h3>Sinopse do livro</h3> -->
+            <label for="SinopseLivro">Sinopse do livro </label>
+            <textarea id="SinopseLivro" name="sinopse" rows="8" cols="40" required placeholder="Digite a sinopse do livro"></textarea>
+        </div>
+        <div class="campo_imagem">
+            <label for="imagem">Imagem do livro</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" required placeholder="Escolher imagem">
+        </div>
+                <br>
+        </form>
+    </main>
+    <footer class="Rodape">
+        <h1>Criadores do projeto: </h1>
+        <h2>João, Kevin e Murillo</h2>
+    </footer>
+</body>
