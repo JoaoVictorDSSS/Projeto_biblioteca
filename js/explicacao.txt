@@ -1,0 +1,2 @@
+Esses códigos em javascript atualmente são referentes a atividade exigida em sala de aula.
+São simulações de como o sistema possivelmente funcionará em versões futuras.
