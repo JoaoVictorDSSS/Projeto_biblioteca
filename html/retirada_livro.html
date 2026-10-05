@@ -1,26 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bibliotecolandia</title>
-    <link rel="stylesheet" href="../css/retirada_livro.css">
-</head>
+    <link rel="stylesheet" href="../css/retirada_livro.css" />
+  </head>
 
-<body>
+  <body>
     <header class="Cabecalho">
-
-        <h1>Bibliotecolandia</h1>
-        <h2>Retirada e devolução</h2>
-        <nav>
-            <a href="index.html" class="BotaoVoltar">Voltar</a>
-        </nav>
+      <h1>Bibliotecolandia</h1>
+      <h2>Retirada e devolução</h2>
+      <nav>
+        <a href="index.html" class="BotaoVoltar">Voltar</a>
+      </nav>
     </header>
+
     <main class="Container">
-        <h1>info aqui!</h1>
+      <div>
+        <label for="nomeUsuario">Usuário</label>
+        <input type="text" id="nomeUsuario" placeholder="Ex.: João" />
+        <label for="tituloLivro">Título do livro</label>
+        <input type="text" id="tituloLivro" placeholder="Ex.: 1984" />
+        <button type="button" onclick="retirarLivro()">Retirar</button>
+        <button type="button" onclick="devolverLivro()">Devolver</button>
+        <button type="button" onclick="mostrarRelatorio()">
+          Ver relatório
+        </button>
+        <p id="resultado"></p>
+        <div id="relatorio"></div>
+      </div>
     </main>
+
     <footer class="Rodape">
-        <h1>Criadores do projeto: </h1>
-        <h2>João, Kevin e Murillo</h2>
+      <h1>Criadores do projeto:</h1>
+      <h2>João, Kevin e Murillo</h2>
     </footer>
-</body>
+
+    <script src="../js/dados.js"></script>
+    <script src="../js/funcoes.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

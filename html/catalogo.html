@@ -1,29 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bibliotecolandia</title>
-    <link rel="stylesheet" href="../css/catalogo.css">
-</head>
+    <link rel="stylesheet" href="../css/catalogo.css" />
+  </head>
 
-<body>
+  <body>
     <header class="Cabecalho">
-
-        <h1>Bibliotecolandia</h1>
-        <h2>Catálogo</h2>
-        <nav>
-            <a href="index.html" class="BotaoVoltar">Voltar</a>
-        </nav>
+      <h1>Bibliotecolandia</h1>
+      <h2>Catálogo</h2>
+      <nav>
+        <a href="index.html" class="BotaoVoltar">Voltar</a>
+      </nav>
     </header>
+
     <main class="Container">
-        <h1>info aqui!</h1>
-        <div class="ContainerLivros">
-            <p>aqui vai um livro</p>
-        </div>
+      <input type="search" id="busca" placeholder="Título ou autor" />
+      <button type="button" onclick="pesquisarLivros()">Pesquisar</button>
+      <button type="button" onclick="mostrarLivrosDisponiveis()">
+        Só disponíveis
+      </button>
+      <div class="ContainerLivros" id="listaLivros"></div>
     </main>
+
     <footer class="Rodape">
-        <h1>Criadores do projeto: </h1>
-        <h2>João, Kevin e Murillo</h2>
+      <h1>Criadores do projeto:</h1>
+      <h2>João, Kevin e Murillo</h2>
     </footer>
-</body>
+
+    <script src="../js/dados.js"></script>
+    <script src="../js/funcoes.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
