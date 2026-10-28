@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt BR">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliotecolandia</title>
-    <link rel="stylesheet" href="../css/retirada_livro.css">
+    <title>Retirada | Bibliotecolandia</title>
+    <link rel="stylesheet" href="../css/formularios.css">
 </head>
 
 <body>
     <header class="Cabecalho">
-
         <h1>Bibliotecolandia</h1>
-        <h2>Retirada e devolução</h2>
-        <nav>
-            <a href="index.html" class="BotaoVoltar">Voltar</a>
-        </nav>
+        <h2>Retirada de livro</h2>
+        <nav><a href="operacoes.html" class="BotaoVoltar">Voltar às opções</a></nav>
     </header>
     <main class="Container">
-        <h1>info aqui!</h1>
+        <h2>Dados do livro para retirada</h2>
+        <p>Preencha os campos usando o cadastro de livros como referência.</p>
+        <form class="formulario-livro"
+            onsubmit="alert('Retirada registrada como demonstração. Os dados não são salvos permanentemente.');return false;">
+            <div class="painel-imagem"><label for="imagem">Imagem do livro</label><img class="preview-imagem"
+                    id="preview" alt="Prévia da capa do livro"><input type="file" id="imagem" name="imagem"
+                    accept="image/*" required><small>Escolha uma imagem para visualizar a capa.</small></div>
+            <div class="campos-formulario">
+                <div class="campo campo-largo"><label for="nomeLivro">Nome do livro</label><input id="nomeLivro"
+                        name="nomeLivro" required placeholder="Digite o nome do livro"></div>
+                <div class="campo"><label for="autor">Autor</label><input id="autor" name="autor" required
+                        placeholder="Digite o nome do autor"></div>
+                <div class="campo"><label for="editora">Editora</label><input id="editora" name="editora" required
+                        placeholder="Digite o nome da editora"></div>
+                <div class="campo"><label for="paginas">Quantidade de páginas</label><input type="number" id="paginas"
+                        name="paginas" min="1" required placeholder="Ex.: 250"></div>
+                <div class="campo"><label for="categoria">Categoria</label><input id="categoria" name="categoria"
+                        required placeholder="Ex.: Romance"></div>
+                <div class="campo campo-largo"><label for="dataLancamento">Data de lançamento</label><input type="date"
+                        id="dataLancamento" name="dataLancamento" required></div>
+                <div class="campo campo-largo"><label for="sinopse">Sinopse</label><textarea id="sinopse" name="sinopse"
+                        rows="5" required placeholder="Digite a sinopse do livro"></textarea></div>
+                <div class="acoes-formulario"><button class="botao" type="submit">Registrar retirada</button></div>
+            </div>
+        </form>
     </main>
     <footer class="Rodape">
-        <h1>Criadores do projeto: </h1>
-        <h2>João, Kevin e Murillo</h2>
+        <h3>Criadores do projeto:</h3>
+        <p>João, Kevin e Murillo</p>
     </footer>
+    <script>document.getElementById('imagem').addEventListener('change', function () { const file = this.files[0], preview = document.getElementById('preview'); if (file) { preview.src = URL.createObjectURL(file); preview.style.display = 'block'; } });</script>
 </body>
+
+</html>

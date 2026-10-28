@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt BR">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliotecolandia</title>
-    <link rel="stylesheet" href="../css/catalogo.css">
+    <title>Catálogo | Bibliotecolandia</title>
+    <link rel="stylesheet" href="../css/formularios.css">
 </head>
 
 <body>
     <header class="Cabecalho">
-
         <h1>Bibliotecolandia</h1>
-        <h2>Catálogo</h2>
-        <nav>
-            <a href="index.html" class="BotaoVoltar">Voltar</a>
-        </nav>
+        <h2>Catálogo de livros</h2>
+        <nav><a href="index.html" class="BotaoVoltar">Voltar ao início</a></nav>
     </header>
     <main class="Container">
-        <h1>info aqui!</h1>
-        <div class="ContainerLivros">
-            <p>aqui vai um livro</p>
-        </div>
+        <h2>Nosso catálogo</h2>
+        <p>Pesquise os livros disponíveis no acervo.</p>
+        <div class="campo"><label for="pesquisa">Pesquisar por título, autor ou categoria</label><input class="pesquisa"
+                type="search" id="pesquisa" placeholder="Ex.: Vidas Secas"></div>
+        <section class="grid-livros" id="lista-livros">
+            <article class="livro"><img src="../imagens/livros.png" alt="Ícone de livro">
+                <h3>Vidas Secas</h3>
+                <p><strong>Autor:</strong> Graciliano Ramos</p>
+                <p><strong>Categoria:</strong> Romance brasileiro</p>
+                <p>Exemplo de item do catálogo.</p>
+            </article>
+            <article class="livro"><img src="../imagens/livros.png" alt="Ícone de livro">
+                <h3>Dom Casmurro</h3>
+                <p><strong>Autor:</strong> Machado de Assis</p>
+                <p><strong>Categoria:</strong> Literatura brasileira</p>
+                <p>Exemplo de item do catálogo.</p>
+            </article>
+            <article class="livro"><img src="../imagens/livros.png" alt="Ícone de livro">
+                <h3>O Pequeno Príncipe</h3>
+                <p><strong>Autor:</strong> Antoine de Saint-Exupéry</p>
+                <p><strong>Categoria:</strong> Ficção</p>
+                <p>Exemplo de item do catálogo.</p>
+            </article>
+        </section>
+        <p class="aviso">Os livros exibidos são exemplos. O catálogo ainda não está conectado a um banco de dados.</p>
     </main>
     <footer class="Rodape">
-        <h1>Criadores do projeto: </h1>
-        <h2>João, Kevin e Murillo</h2>
+        <h3>Criadores do projeto:</h3>
+        <p>João, Kevin e Murillo</p>
     </footer>
+    <script>const pesquisa = document.getElementById('pesquisa'); const livros = [...document.querySelectorAll('.livro')]; pesquisa.addEventListener('input', () => { const termo = pesquisa.value.toLocaleLowerCase('pt-BR'); livros.forEach(livro => { livro.hidden = !livro.innerText.toLocaleLowerCase('pt-BR').includes(termo); }); });</script>
 </body>
+
+</html>

@@ -1,5 +1,4 @@
-  /* João */
- * {
+* {
     padding:0;
     margin:0;
     box-sizing: border-box;
@@ -45,7 +44,7 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 1500px;
-    margin: 9% 200px;
+    margin: 50px 200px;
 }
 
 .Rodape {
@@ -57,49 +56,23 @@ body {
     margin-top: auto;  
     padding:10px;
 }
-/*João*/
 
-/* Kevin */
-.Usuario{   
+.icone{
     display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 5px;
+    margin: 20px;
+}
+
+.opcoes-operacao{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn_retirada{
+    width: 25%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
     margin-bottom: 20px;
-    margin-right: 10px;
-}
-
-.Usuario label{
-    display: flex;       
-    margin-bottom: 6px;   
-    font-size: 0.9rem;
-}
-
-.Usuario input{
-    width: 100%;
-    padding: 12px;
-    border: 3px solid #1b3b5f;
-    border-radius: 6px;
-    outline: none;
-    font-size: 0.95rem;
-    transition: border-color 0.3s;
-    display: flex;
-
-}
-
-.Usuario input:focus{
-    border-color: #2c8eff;
-}
-
-.cadastro{
-    text-align: center;
-}
-
-.btn_cadastro {
-    width: 100%;
-    padding: 12px;
-    margin-left: 19px;
-    margin-bottom: 15px;
     background-color: #2c8eff; 
     color: #ffffff;
     border: 2px solid #1b3b5f;
@@ -111,18 +84,45 @@ body {
     align-items: center;
 }
 
-form{
-    width: 400px;
+.btn_retirada p h3{
+    margin: 5%;
 }
 
-form label{
-    width: 30%;
-    text-align: right;
-    float: right;
-    display: block !important;
-    margin-right: 20px;
+.btn_retirada h3{
+    margin-top: 3px;
 }
 
-form input{
-    width: 0%;
+.btn_devolucao{
+    width: 25%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: #2c8eff; 
+    color: #ffffff;
+    border: 2px solid #1b3b5f;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
 }
+
+.btn_doacao{
+    width: 25%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: #2c8eff; 
+    color: #ffffff;
+    border: 2px solid #1b3b5f;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
