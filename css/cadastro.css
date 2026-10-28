@@ -9,14 +9,14 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #000000;
-    background-color: #945f22c7;
+    background-color: #8b5d27da;
     display: flex;
     flex-direction: column;
     min-height: 100vh;  
 }
 .Cabecalho {
     display: flex;
-    background-color: #a87b1aa2;
+    background-color: #7e5e39be;
     padding: 30px;
     align-items: center;
     justify-content: space-between;
@@ -28,17 +28,17 @@ body {
     align-items: center;
     width: 160px;
     height: 40px;
-    background-color: #2c8eff;
+    background-color: #ffffff;
     color: #000000;
     text-decoration: none;
     border-radius: 5px;
-    border:2px solid black;
+    border:2px solid #000000;
 }
 .BotaoVoltar:hover{
-    background-color: #1b3b5f;
+    background-color: #b1a278;
 }
 .Container{
-    background-color:#0c4586;
+    background-color:#86430c93;;
     border:2px solid black;
     border-radius: 12px;
     display:flex;
@@ -50,7 +50,7 @@ body {
 
 .Rodape {
     display: flex;
-    background-color: #0c4586;
+    background-color: #7e5e39be;
     align-items: center;
     justify-content: space-between;
     border: 2px solid black;
@@ -61,7 +61,9 @@ body {
 
 /* Kevin */
 .Usuario{   
-    display: flex;
+    display: flex; 
+    font-size: 120px;    
+    /* font-style: bold; */
     align-items: center;
     width: 100%;
     padding: 5px;
@@ -78,7 +80,7 @@ body {
 .Usuario input{
     width: 100%;
     padding: 12px;
-    border: 3px solid #1b3b5f;
+    border: 2px solid #1b3b5f;
     border-radius: 6px;
     outline: none;
     font-size: 0.95rem;
@@ -88,7 +90,7 @@ body {
 }
 
 .Usuario input:focus{
-    border-color: #2c8eff;
+    border-color: #000000;
 }
 
 .cadastro{
@@ -102,7 +104,7 @@ body {
     margin-bottom: 15px;
     background-color: #8b5d27da; 
     color: #ffffff;
-    border: 2px solid #1b3b5f;
+    border: 2px solid #000000;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
