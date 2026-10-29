@@ -8,14 +8,14 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #000000;
-    background-color: #072424;
+    background-color: #8b5d27da;
     display: flex;
     flex-direction: column;
     min-height: 100vh;  
 }
 .Cabecalho {
     display: flex;
-    background-color: #0c4586;
+    background-color: #7e5e39be;
     padding: 30px;
     align-items: center;
     justify-content: space-between;
@@ -27,17 +27,17 @@ body {
     align-items: center;
     width: 160px;
     height: 40px;
-    background-color: #2c8eff;
+    background-color: #ffffffff;
     color: #000000;
     text-decoration: none;
     border-radius: 5px;
     border:2px solid black;
 }
 .BotaoVoltar:hover{
-    background-color: #1b3b5f;
+    background-color: #c7bfb4;
 }
 .Container{
-    background-color:#0c4586;
+    background-color: #86430c93;
     border:2px solid black;
     border-radius: 12px;
     display:flex;
@@ -98,7 +98,7 @@ form label{
 textarea{
     width: 40%;
     padding: 10px;
-    border: 3px solid #1b3b5f;
+    border: 3px solid #212224;
     border-radius: 6px;
     outline: none;
     font-size: 0.95rem;
@@ -109,7 +109,7 @@ textarea{
 .CadastroLivro #DataLancamento{
     width: 14%;
     padding: 10px;
-    border: 3px solid #1b3b5f;
+    border: 3px solid #2d3136;
     border-radius: 6px;
     outline: none;
     font-size: 0.95rem;
@@ -118,7 +118,7 @@ textarea{
 }
 
 .CadastroLivro input:focus{
-    border-color: #2c8eff;
+    border-color: #060607;
 }
 
 
@@ -145,7 +145,7 @@ textarea{
 
 .Rodape {
     display: flex;
-    background-color: #0c4586;
+    background-color: #7e5e39be;
     align-items: center;
     justify-content: space-between;
     border: 2px solid black;
