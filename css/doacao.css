@@ -1,0 +1,130 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+ }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    background-color:cross-fade(#0a0805da, #050403da);
+    background-color: #8b5d27da; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.Cabecalho {
+    display: flex;
+    background-color: #7e5e39be;
+    padding: 30px;  
+    align-items: center;
+    justify-content: space-between;
+    border:2px solid #312113;
+}
+.BotaoVoltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    border:2px solid black;
+}
+
+.BotaoVoltar:hover{
+    background-color: #c7bfb4;
+}
+.BarraPesquisa {
+    width: 700px;
+    height: 60px;
+    padding: 0 15px;
+    border: 2px solid #6d4f0ef6;
+    border-radius:15px;
+    font-size: 24px;
+}
+.Container{
+    max-width: 1500px;
+    background-color:#86430c93;
+    margin: 50px 200px;
+    border:2px solid black;
+    border-radius: 12px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Container section {
+    margin-bottom: 20px;
+}
+.FuncoesDoSite {
+    display: flex;
+}
+.ContainerFuncoes {
+    background-color:rgba(114, 81, 10, 0.658);
+}
+.FuncoesDoSite {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap:30px;
+}
+.FuncoesDoSite a {
+    text-decoration: none;
+    color:#000000
+}
+.ContainerFuncoes {
+    display: flex;
+    border-radius: 13px;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid #2c1f0b;
+    width: 25%;
+    transition: transform 0.3s ease;
+    text-align: ce
+}
+.ContainerFuncoes img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.ContainerFuncoes:hover {
+    transform: scale(1.05);
+    background-color: #5f4a1d;
+}
+.Rodape {
+    display: flex;
+    background-color: #664622ec;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    margin-top: auto;  
+    padding:10px;
+}
+#preview{
+    border: 2px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    border-radius: 5px;
+
+}
+
+.imagem_livro{
+    display: flex;
+    font-size: 20px;
+}
+
+#imagem{
+    display: flex;
+}
+
+#imagem small{
+    display: flex;
+    justify-content: end;
+}

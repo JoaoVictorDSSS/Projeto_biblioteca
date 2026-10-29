@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doação | Bibliotecolandia</title>
-    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/doacao.css">
 </head>
 
 <body>
@@ -19,9 +19,6 @@
         <p>Preencha as informações do livro e dos responsáveis pela doação.</p>
         <form class="formulario-livro"
             onsubmit="alert('Doação registrada como demonstração. Os dados não são salvos permanentemente.');return false;">
-            <div class="painel-imagem"><label for="imagem">Imagem do livro</label><img class="preview-imagem"
-                    id="preview" alt="Prévia da capa do livro"><input type="file" id="imagem" name="imagem"
-                    accept="image/*" required><small>Escolha uma imagem para visualizar a capa.</small></div>
             <div class="campos-formulario">
                 <div class="campo campo-largo"><label for="nomeLivro">Nome do livro</label><input id="nomeLivro"
                         name="nomeLivro" required placeholder="Digite o nome do livro"></div>
@@ -30,6 +27,12 @@
                 <div class="campo campo-largo"><label for="emailFuncionario">E-mail do funcionário</label><input
                         type="email" id="emailFuncionario" name="emailFuncionario" required
                         placeholder="funcionario@biblioteca.com"></div>
+                <div class="painel-imagem">
+                    <label for="imagem" class="imagem_livro">Imagem do livro</label>
+                    <img class="preview-imagem" id="preview" alt="Capa do livro">
+                    <input type="file" id="imagem" name="imagem" accept="image/*" required placeholder="Escolher imagem">
+                    <small>Escolha uma imagem para visualizar a capa.</small>
+                </div>
                 <div class="acoes-formulario"><button class="botao" type="submit">Registrar doação</button></div>
             </div>
         </form>

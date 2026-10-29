@@ -74,7 +74,7 @@ body {
 .Usuario label{
     display: flex;       
     margin-bottom: 6px;   
-    font-size: 0.9rem;
+    font-size: 20px;
 }
 
 .Usuario input{
