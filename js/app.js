@@ -19,24 +19,68 @@ function cadastrarUsuario() {
     document.getElementById("resultado").innerHTML = validacao.mensagem;
   }
   
-  function cadastrarLivro() {
-    const titulo = document.getElementById("titulo").value;
-    const autor = document.getElementById("autor").value;
-    const categoria = document.getElementById("categoria").value;
-    const validacao = validarCadastroLivro(titulo, autor, categoria, livros);
-  
-    if (validacao.valido) {
-      livros.push({
-        id: gerarProximoId(livros),
-        titulo: titulo.trim(),
-        autor: autor.trim(),
-        categoria: categoria.trim(),
-        situacao: "DISPONÍVEL",
-      });
+  async function cadastrarLivro() {
+    const titulo = document.getElementById("titulo").value.trim();
+    const autor = document.getElementById("autor").value.trim();
+    const categoria = Number(document.getElementById("categoria").value);
+    const sinopse = document.getElementById("sinopse").value.trim();
+    const dataPublicacao = document.getElementById("dataPublicacao").value;
+    const localizacao = document.getElementById("localizacao").value.trim();
+
+    const resultado = document.getElementById("resultado");
+
+    // Validação dos campos
+    if (!titulo || !autor || !categoria || !sinopse || !dataPublicacao || !localizacao) {
+        resultado.innerText = "Preencha todos os campos.";
+        return;
     }
-  
-    document.getElementById("resultado").innerHTML = validacao.mensagem;
-  }
+
+    if (!Number.isInteger(categoria) || categoria < 1) {
+        resultado.innerText = "A categoria deve ser um número inteiro positivo.";
+        return;
+    }
+
+    // Monta o objeto que será enviado para a API
+    const livro = {
+        titulo_livro: titulo,
+        autor_livro: autor,
+        categoria_livro: categoria,
+        sinopse_livro: sinopse,
+        data_publicacao: dataPublicacao,
+        localizacao_livro: localizacao
+    };
+
+    try {
+        const resposta = await fetch("http://127.0.0.1:8000/livros", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(livro)
+        });
+
+        const dados = await resposta.json();
+
+        if (!resposta.ok) {
+            throw new Error(dados.detail || "Erro ao cadastrar livro.");
+        }
+
+        resultado.innerText =
+            dados.mensagem + " ID: " + dados.id_livro;
+
+        // Limpa os campos após o cadastro
+        document.getElementById("titulo").value = "";
+        document.getElementById("autor").value = "";
+        document.getElementById("categoria").value = "";
+        document.getElementById("sinopse").value = "";
+        document.getElementById("dataPublicacao").value = "";
+        document.getElementById("localizacao").value = "";
+
+    } catch (erro) {
+        resultado.innerText = "Erro: " + erro.message;
+        console.error(erro);
+    }
+}
   
   function mostrarLivros(lista) {
     let html = "";
