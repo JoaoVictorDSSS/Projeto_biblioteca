@@ -24,13 +24,14 @@ function cadastrarUsuario() {
     const autor = document.getElementById("autor").value.trim();
     const categoria = Number(document.getElementById("categoria").value);
     const sinopse = document.getElementById("sinopse").value.trim();
-    const dataPublicacao = document.getElementById("dataPublicacao").value;
+    const editora = document.getElementById("editora").value.trim();
+    const anoPublicacao = Number(document.getElementById("anoPublicacao").value);
     const localizacao = document.getElementById("localizacao").value.trim();
 
     const resultado = document.getElementById("resultado");
 
     // Validação dos campos
-    if (!titulo || !autor || !categoria || !sinopse || !dataPublicacao || !localizacao) {
+    if (!titulo || !autor || !categoria || !sinopse || !editora || !anoPublicacao || !localizacao) {
         resultado.innerText = "Preencha todos os campos.";
         return;
     }
@@ -46,7 +47,8 @@ function cadastrarUsuario() {
         autor_livro: autor,
         categoria_livro: categoria,
         sinopse_livro: sinopse,
-        data_publicacao: dataPublicacao,
+        editora_livro: editora,
+        ano_publicacao: anoPublicacao,
         localizacao_livro: localizacao
     };
 
@@ -73,7 +75,8 @@ function cadastrarUsuario() {
         document.getElementById("autor").value = "";
         document.getElementById("categoria").value = "";
         document.getElementById("sinopse").value = "";
-        document.getElementById("dataPublicacao").value = "";
+        document.getElementById("editora").value = "";
+        document.getElementById("anoPublicacao").value = "";
         document.getElementById("localizacao").value = "";
 
     } catch (erro) {

@@ -1,0 +1,216 @@
+/* Identidade visual única - Bibliotecolandia */
+:root {
+    --azul-900: #12345a;
+    --azul-800: #174a7e;
+    --azul-700: #1d5f9e;
+    --azul-600: #2878bd;
+    --azul-100: #eaf3fb;
+    --fundo: #f3f6fa;
+    --superficie: #ffffff;
+    --texto: #243447;
+    --texto-suave: #617286;
+    --borda: #d4deea;
+    --sombra: 0 8px 24px rgba(18, 52, 90, .09);
+    --raio: 12px;
+    --altura-controle: 46px;
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { min-height: 100%; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  
+  .Cabecalho {
+    width: 100%;
+    min-height: 104px;
+    padding: 20px clamp(18px, 4vw, 56px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    flex-wrap: wrap;
+    color: #fff;
+    background: var(--azul-900);
+    border: 0;
+    box-shadow: 0 3px 12px rgba(18, 52, 90, .15);
+  }
+  .Cabecalho h1 { font-size: clamp(1.35rem, 2.5vw, 1.9rem); line-height: 1.2; }
+  .Cabecalho h2 { font-size: 1.15rem; font-weight: 500; color: #e4effa; }
+  .Cabecalho nav { display: flex; align-items: center; }
+  
+  .BotaoVoltar, .BotaoCadastro {
+    min-width: 140px;
+    min-height: 42px;
+    padding: 9px 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 8px;
+    background: var(--azul-600);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .BotaoVoltar:hover, .BotaoCadastro:hover { background: var(--azul-700); transform: translateY(-1px); }
+  
+  .Container {
+    width: min(1100px, calc(100% - 40px));
+    margin: 38px auto;
+    padding: clamp(22px, 4vw, 38px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+  }
+  .Container > h1, .Container > h2, .Container > p { text-align: center; }
+  .Container > h1, .Container > h2 { color: var(--azul-900); }
+  .Container > p { color: var(--texto-suave); }
+  
+  /* Todos os campos - texto, busca, senha, número, data, e-mail e textarea */
+  label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--azul-900);
+    font-size: .94rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  input:not([type="checkbox"]):not([type="radio"]),
+  select, textarea {
+    width: 100%;
+    min-height: var(--altura-controle);
+    padding: 11px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: var(--texto);
+    font: inherit;
+    font-size:  .98rem;
+    transition: border-color .18s ease, box-shadow .18s ease;
+  }
+  input::placeholder, textarea::placeholder { color: #8998a9; }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--azul-600);
+    box-shadow: 0 0 0 3px rgba(40, 120, 189, .14);
+  }
+  input[type="date"], input[type="number"] { font-variant-numeric: tabular-nums; }
+  input[type="date"] { min-height: var(--altura-controle); }
+  input[type="number"] { appearance: textfield; }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button { opacity: 1; }
+  textarea { min-height: 120px; resize: vertical; }
+  input[type="file"] { padding: 9px; background: var(--azul-100); }
+  
+  button, .botao {
+    min-height: 42px;
+    padding: 10px 18px;
+    border: 1px solid var(--azul-700);
+    border-radius: 8px;
+    background: var(--azul-600);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+  button:hover, .botao:hover { background: var(--azul-800); transform: translateY(-1px); }
+  button:focus-visible, a:focus-visible { outline: 3px solid rgba(40,120,189,.35); outline-offset: 2px; }
+  
+  /* Campos organizados */
+  .Container > div:has(> .Usuario),
+  .Container > div:has(> label),
+  .Container > .formulario-livro,
+  .formulario-livro { width: 100%; max-width: 720px; margin-inline: auto; }
+  .Usuario, .campo { display: flex; flex-direction: column; width: 100%; margin-bottom: 16px; }
+  .Usuario label { margin-bottom: 6px; }
+  .Usuario input { width: 100%; }
+  .cadastro { margin-bottom: 18px; text-align: center; color: var(--azul-900); }
+  .btn_cadastro { width: 100%; margin: 4px 0 12px; }
+  .campos-formulario { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; width: 100%; }
+  .campo-largo, .painel-imagem, .acoes-formulario { grid-column: 1 / -1; }
+  .campo { margin: 0; }
+  .campo input, .campo textarea { width: 100%; }
+  .acoes-formulario { display: flex; justify-content: center; width: 100%; margin-top: 4px; }
+  .acoes-formulario button { min-width: 210px; }
+  .painel-imagem { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
+  .painel-imagem small { color: var(--texto-suave); }
+  #preview, .preview-imagem {
+    display: block;
+    width: 160px;
+    height: 220px;
+    object-fit: contain;
+    padding: 8px;
+    border: 1px dashed var(--borda);
+    border-radius: 8px;
+    background: var(--azul-100);
+  }
+  
+  /* Página inicial */
+  .BarraPesquisa { width: min(520px, 100%) !important; background: #fff !important; }
+  .FuncoesDoSite { display: flex; justify-content: center; gap: 22px; width: 100%; margin-top: 12px; }
+  .ContainerFuncoes {
+    width: 33.333%; overflow: hidden; display: flex; flex-direction: column;
+    border: 1px solid var(--borda); border-radius: var(--raio); background: #fff;
+    text-align: center; box-shadow: 0 4px 14px rgba(18,52,90,.07);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .ContainerFuncoes:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
+  .ContainerFuncoes a { display: block; height: 100%; color: var(--azul-900); text-decoration: none; }
+  .ContainerFuncoes img { display: block; width: 100%; height: 210px; object-fit: cover; }
+  .ContainerFuncoes h1 { padding: 16px 12px; font-size: 1.1rem; }
+  
+  /* Operações */
+  .subtitulo { color: var(--azul-900); }
+  .opcoes-operacao { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; width: 100%; }
+  .btn_retirada, .btn_devolucao, .btn_doacao {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    min-height: 150px; padding: 22px; border: 1px solid var(--borda); border-radius: var(--raio);
+    background: var(--azul-100); color: var(--azul-900); text-align: center; text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .btn_retirada:hover, .btn_devolucao:hover, .btn_doacao:hover { background: #d8eafa; transform: translateY(-3px); }
+  .btn_retirada h3, .btn_devolucao h3, .btn_doacao h3 { margin-bottom: 6px; }
+  
+  /* Catálogo e resultados */
+  #busca { max-width: 650px; }
+  .ContainerLivros, #listaLivros, #relatorio {
+    width: 100%; min-height: 80px; padding: 16px; border: 1px solid var(--borda);
+    border-radius: 8px; background: #f8fbfe; color: var(--texto); overflow-wrap: anywhere;
+  }
+  #listaLivros p, #relatorio p { padding: 9px 4px; border-bottom: 1px solid var(--borda); }
+  #resultado { margin-top: 10px; color: var(--azul-800); font-weight: 700; }
+  
+  .Rodape {
+    width: 100%; margin-top: auto; padding: 18px clamp(18px, 4vw, 56px);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--azul-900); color: #fff; border: 0;
+  }
+  .Rodape h1, .Rodape h2, .Rodape h3 { font-size: 1rem; }
+  
+  @media (max-width: 760px) {
+    .Cabecalho { flex-direction: column; text-align: center; padding: 20px; gap: 12px; }
+    .Cabecalho nav { justify-content: center; }
+    .Container { width: calc(100% - 24px); margin: 18px auto; padding: 20px 16px; }
+    .FuncoesDoSite, .opcoes-operacao { display: grid; grid-template-columns: 1fr; }
+    .ContainerFuncoes { width: 100%; }
+    .ContainerFuncoes img { height: 190px; }
+    .campos-formulario { grid-template-columns: 1fr; }
+    .campo-largo, .painel-imagem, .acoes-formulario { grid-column: auto; }
+    .Rodape { flex-direction: column; text-align: center; }
+    .BarraPesquisa { max-width: 100%; }
+  }
